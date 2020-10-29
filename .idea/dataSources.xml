@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="root@localhost" uuid="c47378b4-ddad-43cd-816c-c04876c9cef4">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://localhost:3306/PHP_CMC_WebApp</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="CMC_WebApp_Admin@localhost" uuid="9745f28a-6c71-49ac-8a5e-f788e315b115">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://localhost:3306/PHP_CMC_WebApp</jdbc-url>
+    </data-source>
+  </component>
+</project>

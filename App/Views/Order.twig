@@ -1,0 +1,26 @@
+{% extends 'base.twig' %}
+{% block body %}
+    <a href="/">Home</a>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ID_User</th>
+                <th>Tổng Tiền</th>
+                <th>Thời gian</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+                <tr>
+                    <td>{{ order.id }}</td>
+                    <td>{{ user.id }}</td>
+                    <td>{{ order.total }}</td>
+                    <td>{{ order.timestamp|date('d-m-Y') }}</td>
+                    <td><a href="/orderitem/{{ order.id }}">Chi tiết</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

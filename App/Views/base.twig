@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block head %}{% endblock%}
+</head>
+<body>
+    <nav>
+        <a href="/cart">Cart</a>
+        <a>| | </a>
+        <a href="/login/logout">Logut</a>
+        <a>| | </a>
+        <a> Tài Khoản: {{ user.username}}</a>
+        <a>| |</a>
+        <a> Số dư: {{ user.availablefunds }}</a>
+        <a>| | </a>
+        <a href="/naptien">Nạp tiền</a>
+        <a>| | </a>
+        <a href="/order">Đơn hàng</a>
+        <a>| | </a>
+        <a href="/admin/items/additem">Thêm hàng</a>
+
+    </nav>
+
+    {% block body %}
+
+    {% endblock %}
+</body>
+</html>

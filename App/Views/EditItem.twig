@@ -1,0 +1,36 @@
+{% extends 'base.twig' %}
+{% block body %}
+    <a href="/">Home</a>
+    <form method="post" action="/admin/items/{{ item }}/submit-edit-item">
+        <H1> Sửa Hàng</H1>
+        <table>
+            <tr>
+                <td>Tên Sản phẩm</td>
+                <td>
+                    <input type="text" name="name">
+                </td>
+            </tr>
+            <tr>
+                <td>Mô tả</td>
+                <td>
+                    <input type="text" name="moTa">
+                </td>
+            </tr>
+            <tr>
+                <td>Số Lượng</td>
+                <td>
+                    <input type="text" name="soLuong">
+                </td>
+            </tr>
+            <tr>
+                <td>Giá</td>
+                <td>
+                    <input type="text" name="gia">
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit" >Edit</td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.twig' %}
+{% block body %}
+    <a href="/">Home</a>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Item_Id</th>
+                <th>Tên Sảm Phẩm</th>
+                <th>Số Lượng</th>
+                <th>Giá</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cartItem in cartItems %}
+            <tr>
+                <td>{{ cartItem.item.id }}</td>
+                <td>{{ cartItem.item.name }}</td>
+                <td>{{ cartItem.quantity }}</td>
+                <td>{{ cartItem.item.price }}</td>
+                <td><a href="/cart/{{ cartItem.item.id }}/remove">Remove</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <form method="post" action="/cart/thanh-toan">
+        <button type="submit" >Thanh Toan</button>
+    </form>
+{% endblock %}

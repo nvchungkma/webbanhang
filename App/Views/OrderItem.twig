@@ -1,0 +1,29 @@
+{% extends 'base.twig' %}
+{% block body %}
+    <a href="/">Home</a>
+    <table border="2">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Order_ID</th>
+            <th>Item_Id</th>
+            <th>Số Lượng</th>
+            <th>Giá trị giảm còn</th>
+            <th>Giá gốc</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for orderItem in orderItems %}
+            <tr>
+                <td>{{ orderItem.id}}</td>
+                <td>{{orderItem.order.id}}</td>
+                <td>{{ orderItem.item.id}}</td>
+                <td>{{ orderItem.quantity}}</td>
+                <td>{{ orderItem.appliedprice}}</td>
+                <td>{{ orderItem.baseprice}}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
