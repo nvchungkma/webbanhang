@@ -1,0 +1,26 @@
+{% extends 'base.twig' %}
+{% block body %}
+    <form method="post" action="/chuyentien/xu-ly-du-lieu">
+        <a href="/">Home</a>
+        <H1>Chuyển Tiền</H1>
+        <table>
+            <tr>
+                <td><a>Nhập tên tài khoản nhận</a></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="tkNhan"></td>
+            </tr>
+            <tr>
+                <td><a>Nhập số tiền cần chuyển</a></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="tienChuyen"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Gửi</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}
